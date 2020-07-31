@@ -1,4 +1,4 @@
-import speech_recognition as sr
+import speech_recognition as sr #please put a library into repository
 import os
 from pydub import AudioSegment
 import vk
@@ -48,7 +48,7 @@ def speech_to_text(url, peer_id, start_message):
     dst = convert_ogg_to_wav(filename)
     file = sr.AudioFile(dst)
     with file as source:
-        audio = r.record(file)
+        audio = r.record(source)
     return send_message(
         peer_id,
         "{start} {message}\nTime: {time}".format(
